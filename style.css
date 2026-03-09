@@ -162,8 +162,8 @@ body {
   margin-right: 32px;
 }
 
-/* Add dots between nav links */
-.nav-desktop a:not(:last-child)::after {
+/* Add dots between nav items */
+.nav-desktop > *:not(:last-child)::after {
   content: "·";
   color: var(--color-brown-text);
   margin-left: 8px;
