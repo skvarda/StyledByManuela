@@ -145,6 +145,62 @@ body {
   color: var(--color-tan);
 }
 
+/* Dropdown Navigation */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle::after {
+  content: '▼';
+  font-size: 8px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-white);
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(196, 168, 130, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  padding: 16px 0;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-brown-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-link:hover {
+  background-color: var(--color-cream);
+  color: var(--color-tan);
+}
+
 /* CTA Button */
 .cta-button {
   background-color: var(--color-tan);
@@ -253,6 +309,52 @@ body {
 
 .mobile-cta:hover {
   background-color: var(--color-brown-dark);
+}
+
+/* Mobile Dropdown */
+.mobile-nav-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-toggle-mobile::after {
+  content: '▼';
+  font-size: 12px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-dropdown.active .dropdown-toggle-mobile::after {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 0;
+}
+
+.mobile-nav-dropdown.active .mobile-dropdown-menu {
+  max-height: 200px;
+  margin-top: 16px;
+}
+
+.mobile-dropdown-link {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-brown-text);
+  text-decoration: none;
+  padding: 12px 0;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.mobile-dropdown-link:hover {
+  color: var(--color-tan);
 }
 
 /* Mobile Styles */

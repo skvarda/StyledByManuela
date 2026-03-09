@@ -20,7 +20,13 @@
 
           <!-- Desktop Navigation -->
           <nav class="nav-desktop">
-            <a href="#services" class="nav-link">SERVICES</a>
+            <div class="nav-dropdown">
+              <a href="#services" class="nav-link dropdown-toggle">SERVICES</a>
+              <div class="dropdown-menu">
+                <a href="#full-service" class="dropdown-link">Full-service Styling</a>
+                <a href="#a-la-carte" class="dropdown-link">À La Carte</a>
+              </div>
+            </div>
             <a href="#virtual" class="nav-link">VIRTUAL STYLING</a>
             <a href="#portfolio" class="nav-link">BEFORE & AFTER</a>
             <a href="#about" class="nav-link">ABOUT</a>
@@ -42,7 +48,13 @@
       <!-- Mobile Menu Overlay -->
       <div class="nav-menu mobile-overlay">
         <nav class="mobile-nav">
-          <a href="#services" class="mobile-nav-link">SERVICES</a>
+          <div class="mobile-nav-dropdown">
+            <a href="#services" class="mobile-nav-link dropdown-toggle-mobile">SERVICES</a>
+            <div class="mobile-dropdown-menu">
+              <a href="#full-service" class="mobile-dropdown-link">Full-service Styling</a>
+              <a href="#a-la-carte" class="mobile-dropdown-link">À La Carte</a>
+            </div>
+          </div>
           <a href="#virtual" class="mobile-nav-link">VIRTUAL STYLING</a>
           <a href="#portfolio" class="mobile-nav-link">BEFORE & AFTER</a>
           <a href="#about" class="mobile-nav-link">ABOUT</a>
@@ -75,7 +87,7 @@
         <div class="service-categories">
 
           <!-- Full-service Styling -->
-          <div class="service-category">
+          <div id="full-service" class="service-category">
             <div class="category-header">
               <h3 class="category-title">Full-service Styling</h3>
               <p class="category-description">Complete transformation experience with personalized attention from start to finish</p>
@@ -121,7 +133,7 @@
           </div>
 
           <!-- À La Carte -->
-          <div class="service-category">
+          <div id="a-la-carte" class="service-category">
             <div class="category-header">
               <h3 class="category-title">À La Carte</h3>
               <p class="category-description">Flexible styling services tailored to your specific needs and budget</p>

@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Mobile dropdown toggle
+  const mobileDropdown = document.querySelector('.dropdown-toggle-mobile');
+  const mobileDropdownContainer = document.querySelector('.mobile-nav-dropdown');
+
+  if (mobileDropdown) {
+    mobileDropdown.addEventListener('click', function(e) {
+      e.preventDefault();
+      mobileDropdownContainer.classList.toggle('active');
+    });
+  }
   
   // Smooth scroll for navigation links
   const navLinks = document.querySelectorAll('a[href^="#"]');
