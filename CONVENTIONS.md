@@ -1,42 +1,22 @@
-# Styled by Manuela — AI Builder Instructions
+# Conventions for AI Edits
 
-You are helping build a marketing website for "Styled by Manuela" — a personal styling business.
+You are editing an existing website. Do ONLY what the user's message asks — nothing more.
 
-## Project Details
-- **Stack**: Vanilla JS + Vite (no framework). HTML, CSS, and JS in the project root.
-- **Assets**: Images and resources are in `public/assets/`
-- **Dev server**: Vite on port 5173, hot-reloads on file save
+## Files you can edit (all in project root):
+- `index.html` — main HTML
+- `style.css` — all CSS (linked from index.html)
+- `main.js` — all JS (loaded as module from index.html)
 
-## File Layout (IMPORTANT — only edit these files)
-- `index.html` — the main HTML file (project root, NOT in any subdirectory)
-- `style.css` — all CSS (project root, linked from index.html)
-- `main.js` — all JS (project root, loaded as module from index.html)
-- `public/assets/` — images and uploaded resources
-- Do NOT create or edit files in `src/` or `mysite/` subdirectories — they do not exist.
+Do NOT create new files. Do NOT edit files in subdirectories. Do NOT suggest shell commands.
 
-## Design Direction
-- Modern, elegant, warm aesthetic — think luxury fashion/beauty editorial
-- Color palette: warm neutrals, champagne/gold accents, soft creams and tans
-- Typography: elegant serif headings, clean sans-serif body text
-- Mobile-first responsive design (many visitors will be on phones)
+## Project context:
+- Stack: Vanilla HTML/CSS/JS with Vite dev server
+- Site: "Styled by Manuela" — personal styling & image consulting
+- Images go in `public/assets/`, reference as `/assets/filename.ext`
+- Placeholder images: use https://placehold.co/WIDTHxHEIGHT
 
-## Site Structure
-The site should have these sections (build them as the user requests):
-1. Hero — Full-screen intro with headline and call-to-action
-2. About — About Manuela and her styling philosophy
-3. Services — What she offers (cards or grid layout)
-4. Portfolio/Gallery — Before/after or styled looks
-5. Testimonials — Client quotes
-6. Contact — Email capture form and contact info
-7. Navigation — Sticky nav menu linking to each section
-
-## Rules
-- Keep all HTML in index.html unless the user requests otherwise
-- Keep CSS in style.css (import it in index.html)
-- Keep JS in main.js (import it in index.html)
-- Use images from public/assets/ when available
-- For placeholder images, use https://placehold.co/ with appropriate dimensions
-- Make smooth scroll behavior between sections
-- Ensure everything looks great on mobile (iPad and phone)
-- Write clean, well-commented code
-- When adding new sections, integrate them into the existing nav
+## Style guidelines:
+- Elegant, warm, luxury aesthetic (champagne/gold, soft creams, warm neutrals)
+- Serif headings, sans-serif body text
+- Mobile-first responsive design
+- Smooth scroll between sections
