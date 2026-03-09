@@ -72,7 +72,7 @@ a {
 
 /* Body padding for fixed header + CTA banner */
 body {
-  padding-top: 124px; /* Account for fixed header (72px) + CTA banner (52px) */
+  padding-top: 152px; /* Account for fixed header (72px) + CTA banner (80px) */
 }
 
 /* Page fade-in animation */
@@ -89,6 +89,15 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -184,6 +193,17 @@ body {
   display: inline-block;
 }
 
+.dropdown-toggle {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brown-text);
+  display: inline-flex;
+  align-items: center;
+}
+
 .dropdown-toggle::after {
   content: '▼';
   font-size: 8px;
@@ -242,11 +262,13 @@ body {
   width: 100%;
   background-color: var(--color-brown-dark); /* Dark brown background */
   z-index: 999;
-  height: 52px; /* Specified height */
+  height: 80px; /* Updated height */
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Right-aligned */
   padding: 0 24px;
+  opacity: 0;
+  animation: fadeInBanner 0.6s ease-out 0.2s forwards; /* Slight delay for smooth appearance */
 }
 
 .cta-button {
@@ -406,7 +428,7 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
   body {
-    padding-top: 120px; /* Adjust for mobile header + CTA banner */
+    padding-top: 140px; /* Adjust for mobile header (60px) + CTA banner (80px) */
   }
 
   .header {
@@ -439,7 +461,7 @@ body {
 
   /* Mobile Hero Layout */
   .hero {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 140px);
     grid-template-columns: 1fr; /* Single column on mobile */
     grid-template-rows: auto 1fr; /* Image on top, content below */
   }
@@ -470,7 +492,7 @@ body {
 
 /* Hero Section */
 .hero {
-  height: calc(100vh - 124px); /* Full viewport height minus header/CTA banner */
+  height: calc(100vh - 152px); /* Full viewport height minus header/CTA banner */
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal columns, no gap */
   background-color: var(--color-taupe); /* Same warm taupe background */
