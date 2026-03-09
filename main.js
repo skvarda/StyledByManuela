@@ -28,15 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Smooth scroll for navigation links
-  const navLinks = document.querySelectorAll('a[href^="#"]');
-  navLinks.forEach(link => {
+  // Handle anchor links within the same page (for services page)
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
       const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
+        e.preventDefault();
         const headerHeight = document.querySelector('.header').offsetHeight;
         const offsetTop = targetSection.offsetTop - headerHeight - 20;
         window.scrollTo({
@@ -53,7 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
+  // Close mobile menu when clicking on non-anchor navigation links
+  const navLinksNonAnchor = document.querySelectorAll('.nav-link:not([href^="#"]), .mobile-nav-link:not([href^="#"])');
+  navLinksNonAnchor.forEach(link => {
+    link.addEventListener('click', function() {
+      // Close mobile menu if open
+      if (navMenu && navMenu.classList.contains('active')) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
   // Navbar background on scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', function() {
@@ -63,28 +76,33 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.remove('scrolled');
     }
   });
-  
-  // Intersection Observer for subtle fade-in animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+
+  // Contact form submission
+  const contactForm = document.getElementById('consultation-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Basic form validation
+      const requiredFields = contactForm.querySelectorAll('[required]');
+      let isValid = true;
+
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          isValid = false;
+          field.style.borderColor = '#d32f2f';
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      if (isValid) {
+        // Here you would typically send the form data to your server
+        alert('Thank you for your interest! We will contact you soon to schedule your free consultation.');
+        contactForm.reset();
+      } else {
+        alert('Please fill in all required fields.');
       }
     });
-  }, observerOptions);
-  
-  // Observe sections for fade-in animation
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-  });
+  }
 });

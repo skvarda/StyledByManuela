@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Styled by Manuela | Book Your Free Consultation</title>
+    <meta name="description" content="Ready to transform your style? Contact Manuela to book your free consultation and start your personal styling journey today.">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="page-fade-in">
+    <header id="navbar" class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Brand Logo -->
+          <div class="brand">
+            <a href="index.html">
+              <div class="brand-line-1">STYLED BY</div>
+              <div class="brand-line-2">MANUELA</div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <div class="nav-dropdown">
+              <a href="services.html" class="nav-link dropdown-toggle">SERVICES</a>
+              <div class="dropdown-menu">
+                <a href="services.html#full-service" class="dropdown-link">Full-service Styling</a>
+                <a href="services.html#a-la-carte" class="dropdown-link">À La Carte</a>
+              </div>
+            </div>
+            <a href="virtual.html" class="nav-link">VIRTUAL STYLING</a>
+            <a href="portfolio.html" class="nav-link">BEFORE & AFTER</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
+            <a href="contact.html" class="nav-link active">CONTACT</a>
+          </nav>
+
+          <!-- CTA Button -->
+          <a href="contact.html" class="cta-button active">BOOK A FREE CONSULTATION</a>
+
+          <!-- Mobile Hamburger -->
+          <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="nav-menu mobile-overlay">
+        <nav class="mobile-nav">
+          <div class="mobile-nav-dropdown">
+            <a href="services.html" class="mobile-nav-link dropdown-toggle-mobile">SERVICES</a>
+            <div class="mobile-dropdown-menu">
+              <a href="services.html#full-service" class="mobile-dropdown-link">Full-service Styling</a>
+              <a href="services.html#a-la-carte" class="mobile-dropdown-link">À La Carte</a>
+            </div>
+          </div>
+          <a href="virtual.html" class="mobile-nav-link">VIRTUAL STYLING</a>
+          <a href="portfolio.html" class="mobile-nav-link">BEFORE & AFTER</a>
+          <a href="about.html" class="mobile-nav-link">ABOUT</a>
+          <a href="contact.html" class="mobile-nav-link active">CONTACT</a>
+          <a href="contact.html" class="mobile-cta active">BOOK A FREE CONSULTATION</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-header">
+          <h1 class="page-title">Let's Transform Your Style</h1>
+          <p class="page-subtitle">Book your free 20-minute consultation to discuss your style goals</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form-section">
+            <div class="form-intro">
+              <h2 class="form-title">Get Started Today</h2>
+              <p class="form-description">
+                Ready to discover your authentic style? Fill out this form to book your complimentary consultation. We'll discuss your goals, lifestyle, and how I can help transform your confidence through style.
+              </p>
+            </div>
+
+            <form class="contact-form" id="consultation-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="location" class="form-label">Location (City, State/Country)</label>
+                <input type="text" id="location" name="location" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="serviceType" class="form-label">I'm interested in: *</label>
+                <select id="serviceType" name="serviceType" class="form-input" required>
+                  <option value="">Please select...</option>
+                  <option value="full-service">Complete Wardrobe Makeover</option>
+                  <option value="special-event">Special Event Styling</option>
+                  <option value="executive">Executive Image Consulting</option>
+                  <option value="virtual">Virtual Styling</option>
+                  <option value="personal-shopping">Personal Shopping</option>
+                  <option value="closet-organization">Closet Organization</option>
+                  <option value="consultation">Style Consultation Only</option>
+                  <option value="not-sure">Not Sure Yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budget" class="form-label">Budget Range</label>
+                <select id="budget" name="budget" class="form-input">
+                  <option value="">Prefer not to say</option>
+                  <option value="under-500">Under $500</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-2500">$1,000 - $2,500</option>
+                  <option value="2500-5000">$2,500 - $5,000</option>
+                  <option value="over-5000">Over $5,000</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline" class="form-label">When are you looking to get started?</label>
+                <select id="timeline" name="timeline" class="form-input">
+                  <option value="">Please select...</option>
+                  <option value="asap">As soon as possible</option>
+                  <option value="1-2-weeks">Within 1-2 weeks</option>
+                  <option value="1-month">Within 1 month</option>
+                  <option value="2-3-months">2-3 months</option>
+                  <option value="flexible">I'm flexible</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="goals" class="form-label">What are your main style goals?</label>
+                <textarea id="goals" name="goals" class="form-textarea" rows="4" placeholder="Tell me about what you hope to achieve through styling..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="challenges" class="form-label">What styling challenges are you facing?</label>
+                <textarea id="challenges" name="challenges" class="form-textarea" rows="3" placeholder="What struggles with your wardrobe or style would you like help with?"></textarea>
+              </div>
+
+              <button type="submit" class="form-submit">BOOK MY FREE CONSULTATION</button>
+            </form>
+          </div>
+
+          <div class="contact-info-section">
+            <div class="contact-info">
+              <h3 class="info-title">Get In Touch</h3>
+
+              <div class="info-item">
+                <strong class="info-label">Email:</strong>
+                <a href="mailto:hello@styledbymanuela.com" class="info-link">hello@styledbymanuela.com</a>
+              </div>
+
+              <div class="info-item">
+                <strong class="info-label">Location:</strong>
+                <span class="info-text">New York City, NY</span>
+              </div>
+
+              <div class="info-item">
+                <strong class="info-label">Service Areas:</strong>
+                <span class="info-text">NYC Metro Area & Virtual Worldwide</span>
+              </div>
+            </div>
+
+            <div class="consultation-details">
+              <h3 class="details-title">What to Expect</h3>
+              <ul class="details-list">
+                <li>Free 20-minute discovery call</li>
+                <li>Discussion of your style goals</li>
+                <li>Overview of services that fit your needs</li>
+                <li>Transparent pricing information</li>
+                <li>Next steps and timeline planning</li>
+              </ul>
+            </div>
+
+            <div class="social-proof">
+              <h3 class="proof-title">What Clients Say</h3>
+              <blockquote class="testimonial">
+                "Manuela transformed not just my wardrobe, but my entire confidence. I finally feel like myself when I get dressed every morning."
+              </blockquote>
+              <cite class="testimonial-author">— Sarah K., Executive</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
