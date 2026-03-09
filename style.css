@@ -3,6 +3,7 @@
   --color-hero-bg: #C4A882;
   --color-dark-section: #9A7B5B;
   --color-white: #FFFBF5;
+  --color-beige: #F5F0E8;
   --color-text-dark: #2D2A26;
   --color-text-heading: #2D2A26;
   --color-accent-brown: #8B3A1A;
@@ -48,7 +49,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.7;
   color: var(--color-text-dark);
-  background-color: var(--color-white);
+  background-color: var(--color-beige);
   font-size: 16px;
 }
 
@@ -230,7 +231,7 @@ p {
 
 /* About Section */
 #about {
-  background: var(--color-white);
+  background: var(--color-beige);
   padding: var(--spacing-xxl) 0;
 }
 
@@ -291,7 +292,7 @@ p {
 
 /* Services Section */
 #services {
-  background: var(--color-white);
+  background: var(--color-beige);
   padding: var(--spacing-xxl) 0;
 }
 
@@ -360,7 +361,7 @@ p {
 
 /* À La Carte Services */
 #a-la-carte {
-  background: var(--color-white);
+  background: var(--color-beige);
   padding: var(--spacing-xxl) 0;
 }
 
@@ -383,7 +384,7 @@ p {
 
 /* Virtual Styling Section */
 #virtual-styling {
-  background: var(--color-white);
+  background: var(--color-beige);
   padding: var(--spacing-xxl) 0;
 }
 
@@ -407,7 +408,7 @@ p {
 
 /* Before & After Section */
 #before-after {
-  background: var(--color-white);
+  background: var(--color-beige);
   padding: var(--spacing-xxl) 0;
 }
 
