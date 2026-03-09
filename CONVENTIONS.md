@@ -7,6 +7,13 @@ You are helping build a marketing website for "Styled by Manuela" — a personal
 - **Assets**: Images and resources are in `public/assets/`
 - **Dev server**: Vite on port 5173, hot-reloads on file save
 
+## File Layout (IMPORTANT — only edit these files)
+- `index.html` — the main HTML file (project root, NOT in any subdirectory)
+- `style.css` — all CSS (project root, linked from index.html)
+- `main.js` — all JS (project root, loaded as module from index.html)
+- `public/assets/` — images and uploaded resources
+- Do NOT create or edit files in `src/` or `mysite/` subdirectories — they do not exist.
+
 ## Design Direction
 - Modern, elegant, warm aesthetic — think luxury fashion/beauty editorial
 - Color palette: warm neutrals, champagne/gold accents, soft creams and tans
