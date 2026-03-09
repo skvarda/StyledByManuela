@@ -200,8 +200,8 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-brown-text);
-  display: inline-flex;
-  align-items: center;
+  display: inline;
+  vertical-align: baseline;
 }
 
 .dropdown-toggle::after {
