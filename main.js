@@ -2,10 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Mobile navigation toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
-  
+
   if (navToggle) {
     navToggle.addEventListener('click', function() {
+      navToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
+
+      // Prevent scroll when menu is open
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
   }
   
@@ -16,17 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
-      
+
       if (targetSection) {
-        const offsetTop = targetSection.offsetTop - 100; // Account for fixed navbar
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const offsetTop = targetSection.offsetTop - headerHeight - 20;
         window.scrollTo({
           top: offsetTop,
           behavior: 'smooth'
         });
-        
+
         // Close mobile menu if open
         if (navMenu && navMenu.classList.contains('active')) {
+          navToggle.classList.remove('active');
           navMenu.classList.remove('active');
+          document.body.style.overflow = '';
         }
       }
     });
